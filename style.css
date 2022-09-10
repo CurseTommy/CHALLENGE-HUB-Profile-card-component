@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --dark-grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    background-color: var(--dark-cyan);
+    font-family: 'Kumbh Sans', sans-serif;
+    overflow: hidden;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section {
+    width: 30%;
+    background-color: white;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+div.character-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+    gap: 10px;
+}
+
+div.line {
+    height: 1px;
+    width: 100%;
+    position: relative;
+    bottom: -30px;
+    margin-bottom: 30px;
+    background-color: var(--dark-gray);
+}
+
+div.stats-overall {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+img.bg-pattern-card {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    width: 100%;
+}
+
+img.face {
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+img.bgc {
+    position: absolute;
+}
+
+img.bg-pattern-top {
+    top: -50%;
+    left: -23%;
+}
+
+img.bg-pattern-bottom {
+    bottom: -65%;
+    right: -20%;
+}
+
+p {
+    font-weight: 400;
+}
+
+p.name,
+p.likes {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+span.age {
+    font-weight: 400;
+
+}
+
+span.age,
+p.desc,
+p.from {
+    color: var(--dark-gray);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 425px) {
+    section {
+        width: 70%;
+        margin-left: -70px;
+    }
+
+    img.bg-pattern-top {
+        display: none;
+    }
+
+    img.bg-pattern-bottom {
+        display: none;
+    }
+
+    .attribution {
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+}
